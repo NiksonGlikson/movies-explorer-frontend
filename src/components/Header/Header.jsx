@@ -4,11 +4,15 @@ import logoHeader from '../../images/logo.svg';
 
 function Header() {
     return (
-        <section className='header'>
-            <img className='header__logo' src={logoHeader} alt='логотип'/>
-            <Link to='/signup' className='registration__link'>Регистрация</Link>
-            <Link to='/signin' className='authorization__link'>Войти</Link>     
-        </section>
+        <header className='header'>
+            <div className='header__container'>
+                <img className='header__logo' src={logoHeader} alt='логотип'/>
+                    <div className='header__links'>
+                        <Link to='/signup' className='registration__link'>Регистрация</Link>
+                        <Link to='/signin' className='authorization__link'>Войти</Link>
+                    </div>
+            </div>  
+        </header>
     )
 }
 

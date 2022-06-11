@@ -1,0 +1,114 @@
+.about {
+    padding: 110px 120px;
+    background-color: #FFFFFF;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.about__title {
+    margin: 10px 0 0 0;
+    padding-bottom: 23px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+    color: #000000;
+}
+
+.about__description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__description-item {
+    margin: 70px 0 0 0;
+    padding-right: 40px;
+}
+
+.about__description-title {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    color: #000000;
+}
+
+.about__description-exp {
+    margin-top: 26px 0 0 0;
+    width: 550px;
+    padding: 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #000000;
+}
+
+.about__duration {
+    padding: 0;
+    margin: 110px 0 10px 0;
+}
+
+.about__duration-description {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.about__duration-exp {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about__duration-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+    padding: 9px 0;
+    margin: 0;
+}
+
+.about__duration-title_green {
+    background-color: #2BE080;
+    color: #000000;
+    width: 228px;
+}
+
+.about__duration-title_white {
+    color: #000000;
+    background-color: #F2F2F2;
+    width: 912px;
+}
+
+.about__duration-exp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #A0A0A0;
+    margin: 14px  0;
+}
