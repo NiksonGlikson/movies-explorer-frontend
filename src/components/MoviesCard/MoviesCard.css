@@ -1,0 +1,36 @@
+.movies-card__info {
+    width: 100%;
+    max-width: 363px;
+}
+
+.movies-card__image {
+    width: 100%;
+}
+
+.movies-card__description {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 29px;
+    border-bottom: 1px solid #E8E8E8;
+    align-items: center;
+}
+
+.movies-card__title {
+    font-size: 13px;
+    line-height: 15.73px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.movies-card__like {
+    width: 24px;
+    height: 24px;
+}
+
+.movies-card__duration {
+    color: #A0A0A0;
+    font-size: 11px;
+    line-height: 13.31px;
+    font-weight: 400;
+    padding-top: 6px;
+}
