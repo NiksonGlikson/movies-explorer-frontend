@@ -9,28 +9,31 @@ function Portfolio() {
             <div className="portfolio__main">
                 <ul className="portfolio__list">
                     <li className="portfolio__item">
+                        <p className="portfolio__link">Статичный сайт</p>
                         <a
-                        href="https://github.com/NiksonGlikson"
-                        className="portfolio__link"
-                        target='_blank'
-                        rel='noreferrer'>Статичный сайт</a>
+                         href="https://github.com/NiksonGlikson"
+                         target='_blank'
+                         rel='noreferrer'>
                         <img className="portfolio__image" src={imgPortfolio} alt="переход по ссылке"></img>
+                        </a>
                     </li>
                     <li className="portfolio__item">
+                        <p className="portfolio__link">Адаптивный сайт</p>
                         <a
                         href="https://github.com/NiksonGlikson"
-                        className="portfolio__link"
                         target='_blank'
-                        rel='noreferrer'>Адаптивный сайт</a>
+                        rel='noreferrer'>
                         <img className="portfolio__image" src={imgPortfolio} alt="переход по ссылке"></img>
+                        </a>
                     </li>
                     <li className="portfolio__item">
+                        <p className="portfolio__link">Одностраничное приложение</p>
                         <a
-                        href="https://github.com/NiksonGlikson"
-                        className="portfolio__link"
-                        target='_blank'
-                        rel='noreferrer' >Одностраничное приложение</a>
+                         href="https://github.com/NiksonGlikson"
+                         target='_blank'
+                         rel='noreferrer'>
                         <img className="portfolio__image" src={imgPortfolio} alt="переход по ссылке"></img>
+                        </a>
                     </li>
                 </ul>
             </div>

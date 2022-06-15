@@ -19,7 +19,9 @@ function MoviesCardList() {
                 <MoviesCard />
                 <MoviesCard />
             </div>
-            <button className="cards__button">Еще</button>
+            <div className="cards__mov">
+                <button className="cards__button">Еще</button>
+            </div>
             <Footer />
         </section>
     )

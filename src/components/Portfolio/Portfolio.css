@@ -26,12 +26,14 @@
 .portfolio__item {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     border-bottom: 1px #E6E6E6 solid;
+    align-items: center;
+    text-align: center;
 }
 
 .portfolio__link {
+    padding: 0;
     text-decoration: none;
     color: #000000;
-    margin-bottom: 19px;
 }
