@@ -12,7 +12,7 @@ function Login() {
                     alt='логотип'>
                 </img>
              </Link>
-            <h1 className='login__title'>Добро пожаловать!</h1>
+            <h1 className='login__title'>Рады видеть!</h1>
             <form className='login__form'>
                 <p className="login__type">E-mail</p>
                 <input
@@ -33,7 +33,7 @@ function Login() {
                     maxLength='16'
                 />
                 <button type='submit' className='login__button'>
-                    Зарегистрироваться
+                    Войти
                 </button>
             </form>
             <div className='login__redirect'>
