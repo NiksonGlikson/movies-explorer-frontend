@@ -1,5 +1,5 @@
 import React from 'react';
-import cardImg from '../../images/Benksi.jpg';
+import cardImg from '../../images/BENKSI1.jpg';
 import likeImg from '../../images/like.svg';
 
 function MoviesCard() {

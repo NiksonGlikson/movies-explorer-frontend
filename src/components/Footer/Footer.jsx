@@ -7,12 +7,11 @@ function Footer() {
                 <h2 className="footer__title">Учебный проект Яндекс.Практикум х BeatFilm.</h2>
             </div>
             <div className="footer__main">
-                <div className="footer__year">
-                    <p>&copy;2022</p>
+                <div>
+                    <p className="footer__year">&copy;2022</p>
                 </div>
                 <ul className="footer__list">
-                    <li
-                    className="footer__item">
+                    <li className="footer__item">
                         <a
                         href="/"
                         className="footer__link"
@@ -20,10 +19,9 @@ function Footer() {
                         rel='noreferrer'>
                         Яндекс.Практикум
                         </a>
-                        </li>
-                    <li
-                    className="footer__item">
-                    <a
+                    </li>
+                    <li className="footer__item">
+                        <a
                         href="/"
                         className="footer__link"
                         target='_blank'
@@ -31,9 +29,8 @@ function Footer() {
                         GitHub
                         </a>
                     </li>
-                    <li
-                    className="footer__item">
-                    <a
+                    <li className="footer__item">
+                        <a
                         href="/"
                         className="footer__link"
                         target='_blank'

@@ -4,18 +4,18 @@ function NavTab() {
     return (
         <section className='navtab'>
             <ul className='navtab__list'>
-                <li>
+                <li className='navtab__text'>
                 <a
                 className='navtab__link'
                 href="/"
                 >О проекте</a>
                 </li>
-                <li> 
+                <li className='navtab__text'> 
                 <a
                 className='navtab__link'
                 href="/"
                 >Технологии</a></li>
-                <li>
+                <li className='navtab__text'>
                 <a
                 className='navtab__link'
                 href="/"

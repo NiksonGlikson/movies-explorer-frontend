@@ -22,13 +22,46 @@
     line-height: 15px;
     border: none;
     cursor: pointer;
-    padding: 11px 454px 9px 454px;
+    height: 36px;
     width: 100%;
     max-width: 1140px;
+    padding: 0;
+    background-color: #F9F9F9;
 }
 
 .cards__mov {
     width: 100%;
     max-width: 1140px;
     margin: 50px auto;
+}
+
+@media screen and (max-width: 768px) {
+    .cards__movies {
+        max-width: 768px;
+        grid-template-columns: repeat( auto-fit, minmax(339px, 1fr) );
+    }
+
+    .cards__mov {
+        max-width: 708px;
+    }
+
+    .cards__button {
+        max-width: 708px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .cards__movies {
+        max-width: 300px;
+        grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    }
+
+    .cards__mov {
+        max-width: 300px;
+        margin-bottom: 160px;
+    }
+
+    .cards__button {
+        max-width: 300px;
+    }
 }

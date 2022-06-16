@@ -89,3 +89,27 @@
   .profile__submit-logout:hover {
     cursor: pointer;
   }
+
+  @media screen and (max-width: 768px) {
+    .profile__title {
+      margin: 236px 0 96px 0;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .profile__title {
+      margin: 100px 0 96px 0;
+    }
+
+    .profile__forms {
+      max-width: 260px;
+    }
+
+    .profile__submit-edit {
+      margin-top: 379px;
+    }
+
+    .profile__submit-logout {
+      margin-bottom: 40px;
+    }
+  }

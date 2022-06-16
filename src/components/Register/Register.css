@@ -6,10 +6,7 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-}
-
-.header__logo_auth {
-    margin-top: 78px;
+    margin-top: 160px;
 }
 
 .register__title {
@@ -18,6 +15,10 @@
     font-weight: 500;
     line-height: 29px;
     text-align: left;
+}
+
+.register__homepage {
+    width: 100%;
 }
 
 .register__link {
@@ -43,9 +44,9 @@
     color: #000000;
 	border: 0;
     background-color: #F9F9F9;
-    padding: 15px 0 15px 0;
+    padding: 15px 0px 15px 15px;
+    max-width: 396px;
     width: 100%;
-	max-width: 396px;
 }
 
 .register__form {
@@ -58,7 +59,6 @@
     width: 100%;
     height: 45px;
     background-color: #3456F3;
-    margin-top: 152px;
     color: #FFFFFF;
     border: none;
     font-size: 14px;
@@ -66,6 +66,7 @@
     line-height: 17px;
     text-align: center;
     border-radius: 3px;
+    padding: 0;
 }
 
 .register__button:hover {
@@ -93,5 +94,48 @@
     text-decoration: none;
     margin-left: 6px;
     color: #3456F3;
+}
+
+@media screen and (max-width: 320px) {
+    .register {
+        max-width: 260px;
+    }
+
+    .header__logo {
+        margin: 0;
+    }
+
+    .header__logo_auth {
+        display: flex;
+        justify-content: center;
+        margin: 30px auto 0 auto;
+    }
+
+    .register__button {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .register__form {
+        max-width: 260px;
+    }
+
+    .register__input {
+        max-width: 260px;
+    }
+
+    .register__redirect-text {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    
+    .register__redirect-link {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .register__type {
+        font-size: 10px;
+    }
 }
 

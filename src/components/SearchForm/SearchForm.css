@@ -1,14 +1,15 @@
 .search-form {
     background-color: #FFFFFF;
+    max-width: 1140px;
     width: 100%;
-    max-width: 1280px;
+    height: 100%;
     margin: 0 auto;
 }
 
 .search-form__info {
     display: flex;
     justify-content: space-between;
-    margin: 0 70px 0 70px;
+    margin: 0;
     padding-top: 80px;
     padding-bottom: 92px;
     width: 100%;
@@ -79,4 +80,29 @@
     box-sizing: border-box;
 	border: 0;
     background-color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .search-form {
+        max-width: 708px;
+    }
+
+    .search-form__info {
+        flex-direction: column;
+    }
+
+    .search-form__switch {
+        margin-top: 38px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-form {
+        max-width: 300px;
+    }
+
+    .search-form__form {
+        max-width: 292px;
+    }
 }
