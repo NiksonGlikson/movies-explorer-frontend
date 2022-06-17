@@ -1,19 +1,18 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import logoHeader from '../../images/logo.svg';
+import Navigation from '../Navigation/Navigation.jsx';
 
-function Header() {
+function Header({ loggedIn }) {
     return (
         <header className='header'>
             <div className='header__container'>
                 <Link to='/'>
                     <img className='header__logo' src={logoHeader} alt='логотип'/>
                 </Link>
-                    {/* <div className='header__links'>
-                        <Link to='/signup' className='registration__link'>Регистрация</Link>
-                        <Link to='/signin' className='authorization__link'>Войти</Link>
-                    </div> */}
-            </div>  
+                <Navigation loggedIn={loggedIn} />
+            </div>
         </header>
     )
 }

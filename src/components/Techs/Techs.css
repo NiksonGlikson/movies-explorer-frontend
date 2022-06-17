@@ -101,7 +101,7 @@
     }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 670px) {
     .techs__item {
         width: 75px;
         height: 50px;

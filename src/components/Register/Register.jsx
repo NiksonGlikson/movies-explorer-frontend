@@ -7,7 +7,7 @@ function Register() {
         <section className='register'>
             <Link className='register__homepage' to='/'>
                 <img
-                    className='header__logo header__logo_auth'
+                    className='header__logo header__logo_register'
                     src={logoHeader}
                     alt='логотип'>
                 </img>

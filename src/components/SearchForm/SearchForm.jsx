@@ -1,6 +1,6 @@
 import React from 'react';
 import searchImg from '../../images/find.svg';
-import smallTumb from '../../images/smalltumb.svg';
+import FilterCheckbox from '../FilterCheckBox/FilterCheckBox';
 
 function SearchForm() {
     return (
@@ -21,9 +21,8 @@ function SearchForm() {
                     </button>
                 </form>
                 <div className="search-form__switch">
-                    <h2 className="search-form__title">Короткометражки</h2>
                     <button className="search-form__button_switch" type="submit">
-                    <img className='search-form__img' src={smallTumb} alt='переключатель'/>
+                    <FilterCheckbox />
                     </button>
                 </div>
             </div>

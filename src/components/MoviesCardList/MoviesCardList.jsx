@@ -1,6 +1,5 @@
 import React from 'react';
 import MoviesCard from '../MoviesCard/MoviesCard.jsx';
-import Footer from '../Footer/Footer.jsx';
 
 function MoviesCardList() {
     return (
@@ -22,7 +21,6 @@ function MoviesCardList() {
             <div className="cards__mov">
                 <button className="cards__button">Еще</button>
             </div>
-            <Footer />
         </section>
     )
 }

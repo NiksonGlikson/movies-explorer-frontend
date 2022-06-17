@@ -8,31 +8,34 @@ function Portfolio() {
             <div className="portfolio__info">
             <div className="portfolio__main">
                 <ul className="portfolio__list">
-                    <li className="portfolio__item">
-                        <p className="portfolio__link">Статичный сайт</p>
+                    <li>
                         <a
-                         href="https://github.com/NiksonGlikson"
-                         target='_blank'
-                         rel='noreferrer'>
-                        <img className="portfolio__image" src={imgPortfolio} alt="переход по ссылке"></img>
+                            href="https://github.com/NiksonGlikson"
+                            className="portfolio__item"
+                            target='_blank'
+                            rel='noreferrer'>
+                            <p className="portfolio__link">Статичный сайт</p>
+                            <img className="portfolio__image" src={imgPortfolio} alt="переход по ссылке"></img>
                         </a>
                     </li>
-                    <li className="portfolio__item">
-                        <p className="portfolio__link">Адаптивный сайт</p>
+                    <li>
                         <a
-                        href="https://github.com/NiksonGlikson"
-                        target='_blank'
-                        rel='noreferrer'>
-                        <img className="portfolio__image" src={imgPortfolio} alt="переход по ссылке"></img>
+                            href="https://github.com/NiksonGlikson"
+                            className="portfolio__item"
+                            target='_blank'
+                            rel='noreferrer'>
+                            <p className="portfolio__link">Адаптивный сайт</p>
+                            <img className="portfolio__image" src={imgPortfolio} alt="переход по ссылке"></img>
                         </a>
                     </li>
-                    <li className="portfolio__item">
-                        <p className="portfolio__link">Одностраничное приложение</p>
+                    <li>
                         <a
-                         href="https://github.com/NiksonGlikson"
-                         target='_blank'
-                         rel='noreferrer'>
-                        <img className="portfolio__image" src={imgPortfolio} alt="переход по ссылке"></img>
+                            href="https://github.com/NiksonGlikson"
+                            className="portfolio__item"
+                            target='_blank'
+                            rel='noreferrer'>
+                            <p className="portfolio__link">Одностраничное приложение</p>
+                            <img className="portfolio__image" src={imgPortfolio} alt="переход по ссылке"></img>
                         </a>
                     </li>
                 </ul>

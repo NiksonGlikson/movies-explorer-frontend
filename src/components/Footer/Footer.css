@@ -2,7 +2,7 @@
     background-color: #FFFFFF;
     width: 100%;
     max-width: 1140px;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
 }
 
 .footer__info {
@@ -50,6 +50,10 @@
     margin-left: 20px;
     font-size: 13px;
     line-height: 15.73px;
+}
+
+.footer__link:hover {
+    opacity: .6;
 }
 
 @media screen and (max-width: 768px) {

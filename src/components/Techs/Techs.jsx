@@ -1,8 +1,8 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-function Techs() {
+const Techs = forwardRef((props, ref) => {
     return (
-        <section className="techs">
+        <section className="techs" id="techs" ref={ref}>
             <h2 className="techs__title">Технологии</h2>
             <div className="techs__technologies">
                     <h3 className="techs__name">7 технологий</h3>
@@ -20,6 +20,7 @@ function Techs() {
                 </nav>
             </div>
         </section>
-)}
+    );
+});
 
 export default Techs;

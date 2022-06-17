@@ -76,6 +76,10 @@
     color: #000000;
 }
 
+.aboutme__link:hover {
+    opacity: .6;
+}
+
 @media screen and (max-width: 768px) {
     .aboutme {
       max-width: 668px;  

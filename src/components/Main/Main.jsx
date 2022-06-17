@@ -11,14 +11,14 @@ import Footer from '../Footer/Footer.jsx';
 function Main() {
     return(
         <main className='content'>
-        <Header />
-        <Promo/>
-        <NavTab/>
-        <AboutProject/>
-        <Techs/>
-        <AboutMe/>
-        <Portfolio/>
-        <Footer/>
+            <Header/>
+            <Promo/>
+            <NavTab/>
+            <AboutProject/>
+            <Techs/>
+            <AboutMe/>
+            <Portfolio/>
+            <Footer/>
         </main>
     )
 }

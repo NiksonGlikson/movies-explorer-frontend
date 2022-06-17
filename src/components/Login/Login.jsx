@@ -7,7 +7,7 @@ function Login() {
         <section className='login'>
             <Link className='login__homepage' to='/'>
                 <img
-                    className='header__logo header__logo_auth'
+                    className='header__logo header__logo_register'
                     src={logoHeader}
                     alt='логотип'>
                 </img>
@@ -38,7 +38,7 @@ function Login() {
             </form>
             <div className='login__redirect'>
                 <p className='login__redirect-text'>Еще не зарегистрированы?</p>
-                <Link to='/signin' className='login__redirect-link'>Регистрация</Link>
+                <Link to='/signup' className='login__redirect-link'>Регистрация</Link>
       </div>
         </section>
     )

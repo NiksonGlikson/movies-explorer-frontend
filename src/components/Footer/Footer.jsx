@@ -13,7 +13,7 @@ function Footer() {
                 <ul className="footer__list">
                     <li className="footer__item">
                         <a
-                        href="/"
+                        href="https://practicum.yandex.ru/"
                         className="footer__link"
                         target='_blank'
                         rel='noreferrer'>
@@ -22,7 +22,7 @@ function Footer() {
                     </li>
                     <li className="footer__item">
                         <a
-                        href="/"
+                        href="https://github.com/NiksonGlikson"
                         className="footer__link"
                         target='_blank'
                         rel='noreferrer'>
@@ -31,7 +31,7 @@ function Footer() {
                     </li>
                     <li className="footer__item">
                         <a
-                        href="/"
+                        href="https://vk.com/"
                         className="footer__link"
                         target='_blank'
                         rel='noreferrer'>

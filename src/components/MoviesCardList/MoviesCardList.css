@@ -21,12 +21,16 @@
     font-weight: 400;
     line-height: 15px;
     border: none;
-    cursor: pointer;
     height: 36px;
     width: 100%;
     max-width: 1140px;
     padding: 0;
     background-color: #F9F9F9;
+}
+
+.cards__button:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 .cards__mov {

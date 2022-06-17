@@ -47,6 +47,11 @@
     background-color: #ffffff;
 }
 
+.search-form__button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 .search-form__image {
     padding: 7px 7px;
 	border: 0;
@@ -80,6 +85,11 @@
     box-sizing: border-box;
 	border: 0;
     background-color: #ffffff;
+}
+
+.search-form__button_switch:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 @media screen and (max-width: 768px) {

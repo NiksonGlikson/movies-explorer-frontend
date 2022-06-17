@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from '../Header/Header.jsx';
 
-function Profile() {
+function Profile(loggedIn) {
     return (
         <section className="profile">
+            <Header loggedIn={loggedIn}/>
             <h1 className="profile__title">Привет, Никита!</h1>
             <form className="profile__forms">
                 <div className="profile__inputs">

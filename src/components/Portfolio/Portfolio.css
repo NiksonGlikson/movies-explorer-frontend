@@ -29,16 +29,25 @@
 .portfolio__item {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
     border-bottom: 1px #E6E6E6 solid;
     align-items: center;
     text-align: center;
+    text-decoration: none;
+    margin: 0 0 20px 0;
+}
+
+.portfolio__item:hover {
+    opacity: .6;
 }
 
 .portfolio__link {
     padding: 0;
     text-decoration: none;
     color: #000000;
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 400;
+    margin: 0 0 19px 0;
 }
 
 @media screen and (max-width: 768px) {
