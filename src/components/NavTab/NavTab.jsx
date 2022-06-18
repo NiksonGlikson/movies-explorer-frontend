@@ -7,18 +7,18 @@ function NavTab() {
                 <li className='navtab__text'>
                 <a
                 className='navtab__link'
-                href="/"
+                href="#about-project"
                 >О проекте</a>
                 </li>
                 <li className='navtab__text'> 
                 <a
                 className='navtab__link'
-                href="/"
+                href="#techs"
                 >Технологии</a></li>
                 <li className='navtab__text'>
                 <a
                 className='navtab__link'
-                href="/"
+                href="#about-me"
                 >Студент</a>
                 </li>
             </ul>

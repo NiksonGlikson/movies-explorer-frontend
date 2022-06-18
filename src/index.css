@@ -22,3 +22,4 @@
 @import url(./components/SavedMovies/SavedMovies.css);
 @import url(./components/FilterCheckBox/FilterCheckBox.css);
 @import url(./utils/UI.css);
+@import url(./components/Preloader/PreLoader.css);

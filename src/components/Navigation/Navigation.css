@@ -41,6 +41,10 @@
   .navigation__link:hover {
     opacity: 0.6;
   }
+
+  .navigation__link_register {
+    color: #FFFFFF;
+  }
   
   .navigation__profile {
     color: #000000;

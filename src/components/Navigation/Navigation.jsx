@@ -49,7 +49,7 @@ function Navigation({ loggedIn }) {
           name: 'Регистрация',
           path: 'signup',
           classNameItem: '',
-          classNameLink: '',
+          classNameLink: 'navigation__link_register',
         },
         {
           name: 'Войти',
