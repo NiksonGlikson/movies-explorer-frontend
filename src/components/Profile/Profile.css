@@ -10,7 +10,7 @@
   
   .profile__title {
     margin: 148px 0 123px 0;
-    color: #000000;
+    color: #FFFFFF;
     font-size: 24px;
     font-weight: 500;
     line-height: 29px;
@@ -32,7 +32,7 @@
     line-height: 13px;
     text-align: left;
     padding: 0 0 16px 0;
-    color: #000000;
+    color: #FFFFFF;
     margin: 0;
   }
   
@@ -41,7 +41,7 @@
   }
 
   .profile__inputs:first-child {
-    border-bottom: 1px #E8E8E8 solid;
+    border-bottom: 1px #424242 solid;
     margin-bottom: 16px;
   }
   
@@ -67,6 +67,7 @@
     background-color: transparent;
     margin-top: 220px;
     padding: 0;
+    color: #FFFFFF;
   }
 
   .profile__submit-edit:hover {

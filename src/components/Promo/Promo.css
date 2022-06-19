@@ -3,25 +3,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #073042;
-    position: relative;
 }
 
 .promo__container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #272727;
     display: flex;
     justify-content: center;
 }
 
-.promo__logo {
-    max-width: 320px;
-    height: 320px;
-    margin: 86px auto 0 auto;
-    position: relative;
-    margin-bottom: 195px;
-}
-
 .promo__title {
-    position: absolute;
     text-align: center;
     max-width: 730px;
     max-height: 116px;

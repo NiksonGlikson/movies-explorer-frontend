@@ -1,8 +1,11 @@
 .navtab {
     display: flex;
     justify-content: center;
-    background-color: #000000;
+    max-width: 1200px;
     min-width: 270px;
+    background-color: #272727;
+    margin: 0 auto;
+    padding-top: 151px;
 }
 
 .navtab__list {

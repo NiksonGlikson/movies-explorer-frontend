@@ -19,10 +19,10 @@ function SearchForm() {
                     <button className="search-form__button" type="submit">
                     <img className='search-form__image' src={searchImg} alt='поиск' />
                     </button>
+                    <FilterCheckbox />
                 </form>
                 <div className="search-form__switch">
                     <button className="search-form__button_switch" type="submit">
-                    <FilterCheckbox />
                     </button>
                 </div>
             </div>

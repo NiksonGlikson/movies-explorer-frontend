@@ -17,15 +17,17 @@
 }
 
 .cards__button {
+    color: #FFFFFF;
     font-size: 12px;
     font-weight: 400;
     line-height: 15px;
-    border: none;
+    border: 1px solid #424242;
+    border-radius: 5px;
     height: 36px;
     width: 100%;
-    max-width: 1140px;
+    max-width: 320px;
     padding: 0;
-    background-color: #F9F9F9;
+    background-color: #202020;
 }
 
 .cards__button:hover {
@@ -34,9 +36,11 @@
 }
 
 .cards__mov {
+    display: flex;
+    justify-content: center;
     width: 100%;
     max-width: 1140px;
-    margin: 50px auto;
+    margin: 80px auto 160px auto;
 }
 
 @media screen and (max-width: 768px) {
