@@ -20,10 +20,6 @@
     text-align: left;
 }
 
-.register__homepage {
-    width: 100%;
-}
-
 .register__link {
 	width: 100%;
 	max-width: 396px;
@@ -101,9 +97,12 @@
     color: #4285F4;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 430px) {
     .register {
         max-width: 260px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
     }
 
     .header__logo_auth {

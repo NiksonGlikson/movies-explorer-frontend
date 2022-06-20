@@ -3,6 +3,7 @@
     align-items: center;
     background-color: #2F2F2F;
     border-left: 1px solid #424242;
+    border-radius: 0 30px 30px 0;
   }
   
   .filter__checkbox {
@@ -52,11 +53,22 @@
     margin-right: 30px;
     margin-bottom: 18px;
   }
+
+  @media screen and (max-width: 780px) {
+    .filter {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 30px;
+      justify-content: center;
+      background-color: #202020;
+      border: 0;
+      margin-top: 45px;
+    }
+  }
   
   @media screen and (max-width: 470px) {
     .filter {
       padding-top: 46px;
-      border: 0;
     }
     .filter__name {
       margin: 0;

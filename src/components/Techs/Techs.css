@@ -114,6 +114,14 @@
         font-size: 12px;
         line-height: 14px;
     }
+
+    .techs__description {
+        font-size: 11px;
+        line-height: 16px;
+        margin-bottom: 50px;
+        max-width: 292px;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 390px) {
@@ -135,14 +143,6 @@
         font-size: 30px;
         line-height: 36px;
         margin: 60px 0 24px 0;
-    }
-
-    .techs__description {
-        font-size: 11px;
-        line-height: 16px;
-        margin-bottom: 50px;
-        max-width: 292px;
-        text-align: center;
     }
 
     .techs__list {

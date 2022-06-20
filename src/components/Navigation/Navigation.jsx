@@ -55,7 +55,7 @@ function Navigation({ loggedIn }) {
           name: 'Войти',
           path: 'signin',
           classNameItem: 'navigation__login',
-          classNameLink: '',
+          classNameLink: 'color-black',
         },
       ];
 

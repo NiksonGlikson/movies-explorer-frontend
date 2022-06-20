@@ -122,7 +122,7 @@
     margin: 0;
   }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
     .about {
       max-width: 668px;  
     }

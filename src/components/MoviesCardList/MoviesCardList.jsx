@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import MoviesCard from '../MoviesCard/MoviesCard.jsx';
 
 function MoviesCardList() {
@@ -18,9 +19,11 @@ function MoviesCardList() {
                 <MoviesCard />
                 <MoviesCard />
             </div>
-            <div className="cards__mov">
-                <button className="cards__button">Еще</button>
-            </div>
+            <Route path="/movies">
+                <div className="cards__mov">
+                    <button className="cards__button">Еще</button>
+                </div>
+            </Route>
         </section>
     )
 }

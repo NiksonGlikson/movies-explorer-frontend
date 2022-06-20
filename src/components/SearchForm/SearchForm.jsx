@@ -1,12 +1,13 @@
 import React from 'react';
-import searchImg from '../../images/find.svg';
 import FilterCheckbox from '../FilterCheckBox/FilterCheckBox';
+import searchImg from '../../images/search.svg';
 
 function SearchForm() {
     return (
         <section className="search-form">
             <div className="search-form__info">
                 <form className="search-form__form">
+                    <img className="search-form__img" src={searchImg} alt="поиск" />
                     <input
                     name='movie'
                     id='movie'
@@ -16,15 +17,9 @@ function SearchForm() {
                     required
                     >
                     </input>
-                    <button className="search-form__button" type="submit">
-                    <img className='search-form__image' src={searchImg} alt='поиск' />
-                    </button>
-                    <FilterCheckbox />
+                    <button className="search-form__button" type="submit"></button>
                 </form>
-                <div className="search-form__switch">
-                    <button className="search-form__button_switch" type="submit">
-                    </button>
-                </div>
+                <FilterCheckbox />
             </div>
         </section>
     )

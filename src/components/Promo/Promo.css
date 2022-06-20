@@ -25,6 +25,15 @@
     margin-top: 176px;
 }
 
+@media screen and (max-width: 768px) {
+    .promo__title {
+        max-width: 680px;
+        max-height: 104px;
+        font-size: 40px;
+        line-height: 52px;
+    }
+}
+
 @media screen and (max-width: 360px) {
     .promo__logo {
         width: 100%;
