@@ -64,6 +64,23 @@
 }
 
 .movies-card__like_unlike:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.movies-card__delete {
+    background-image: url(../../images/delete.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    margin: 19px 14px 0 0;
+    background-color: transparent;
+}
+
+.movies-card__delete:hover {
+    opacity: 0.5;
     cursor: pointer;
 }
 

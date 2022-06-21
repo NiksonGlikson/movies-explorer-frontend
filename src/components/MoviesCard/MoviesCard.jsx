@@ -9,6 +9,7 @@ function MoviesCard() {
     function handleChangeBtn(e) {
         setLikeBtnActive(!likeBtn);
     }
+
     return (
         <div className="movies-card">
             <div className="movies-card__info">
@@ -20,7 +21,7 @@ function MoviesCard() {
                         : 'movies-card__like_unlike'}`} onClick={handleChangeBtn}></button>
                     </Route>
                     <Route path='/saved-movies'>
-                        <button className='movies-card__like' onClick={handleChangeBtn}></button>
+                        <button className='movies-card__delete' onClick={handleChangeBtn}></button>
                     </Route>
                 </div>
                 <p className="movies-card__duration">1ч42м</p>

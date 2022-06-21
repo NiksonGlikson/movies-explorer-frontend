@@ -69,7 +69,6 @@
 }
 
 .about__duration-title {
-    color: #FFFFFF;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
@@ -98,6 +97,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
+    color: #FFFFFF;
 }
 
 .about__duration_type_backend {
@@ -149,7 +149,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 660px) {
     .about {
       max-width: 284px;
       padding-top: 70px;
@@ -178,5 +178,22 @@
     .about__description-exp {
         font-size: 12px;
         line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about__duration-title {
+      font-size: 11px;
+      line-height: 13px;    
+    }
+
+    .about__duration_type_backend {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .about__duration_type_frontend {
+        font-size: 11px;
+        line-height: 13px;
     }
 }

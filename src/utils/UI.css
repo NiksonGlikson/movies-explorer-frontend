@@ -12,3 +12,8 @@
 .color-black {
     color: #000000;
 }
+
+.font-size {
+    font-size: 18px;
+    line-height: 22px;
+}

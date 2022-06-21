@@ -97,6 +97,14 @@
     }
   }
 
+  @media screen and (max-width: 480px) {
+    .profile__inputs {
+      width: 100%;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+  }
+
   @media screen and (max-width: 320px) {
     .profile__title {
       margin: 100px 0 96px 0;
@@ -104,6 +112,7 @@
 
     .profile__forms {
       max-width: 260px;
+      margin: 0 auto;
     }
 
     .profile__submit-edit {

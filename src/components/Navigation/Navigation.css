@@ -32,9 +32,6 @@
     text-align: right;
     text-decoration: none;
     font-family: Inter;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
     transition: opacity 0.3s ease;
   }
   
@@ -50,6 +47,8 @@
     background-color: #313131;
     padding: 8px 20px;
     border-radius: 20px;
+    font-size: 14px;
+    line-height: 16px;
   }
   
   .navigation__login {
@@ -142,6 +141,8 @@
   
     .navigation_logged_active {
       display: flex;
+      font-size: 18px;
+      line-height: 22px;
     }
   
     .navigation_logged:before {
@@ -178,6 +179,12 @@
   @media screen and (max-width: 480px) {
     .navigation_logged {
       max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .navigation__list {
+      padding-right: 14px;
     }
   }
   

@@ -19,7 +19,6 @@
 
 .search-form__form {
     width: 100%;
-    max-width: 1140px;
     height: 72px;
     display: flex;
     justify-content: space-between;
@@ -42,7 +41,7 @@
     color: #FFFFFF;
 }
 
-.search-form__input:hover {
+.search-form__form:hover {
     cursor: text;
     opacity: 0.6;
 }

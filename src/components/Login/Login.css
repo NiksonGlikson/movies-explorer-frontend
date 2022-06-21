@@ -96,6 +96,9 @@
 @media screen and (max-width: 320px) {
     .login {
         max-width: 260px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
     }
 
     .login__button {
