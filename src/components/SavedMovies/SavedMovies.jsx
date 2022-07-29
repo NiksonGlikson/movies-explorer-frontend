@@ -4,9 +4,9 @@ import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import mainApi from '../../utils/MainApi.js';
 import { CurrentUserContext } from '../../context/CurrentUserContext.js';
 import { MovieContext } from '../../context/MovieContext.js';
-import mainApi from '../../utils/MainApi.js';
 
 function SavedMovies() {
   const { moviesState, setMoviesState } = useContext(MovieContext);
@@ -89,7 +89,7 @@ function SavedMovies() {
 
   useEffect(() => {
     filterMovies(moviesState);
-  }, [moviesState.savedMoviesCheckbox, moviesState.savedMovies.length, moviesState]);
+  }, [moviesState.savedMoviesCheckbox, moviesState.savedMovies.length]);
 
   return (
     <main className='saved__movies'>

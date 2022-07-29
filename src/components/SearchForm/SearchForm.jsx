@@ -10,22 +10,20 @@ function SearchForm({
     checkbox,
   }) {
     return (
-        <section className="search-form">
-            <div className="search-form__info">
-                <form className="search-form__form" onSubmit={onSubmit}>
-                    <img className="search-form__img" src={searchImg} alt="поиск" />
+        <section className='search-form'>
+            <div className='search-form__info'>
+                <form className='search-form__form' onSubmit={onSubmit}>
+                    <img className='search-form__img' src={searchImg} alt='поиск' />
                     <input
-                    name='movie'
-                    id='movie'
                     type='text'
                     placeholder='Фильм'
                     onChange={onChange}
                     value={searchText}
-                    className="search-form__input"
+                    className='search-form__input'
                     required
                     >
                     </input>
-                    <button className="search-form__button" type="submit"></button>
+                    <button className='search-form__button' type='submit'></button>
                 </form>
                 <FilterCheckbox toggleCheckbox={toggleCheckbox} checkbox={checkbox}/>
             </div>

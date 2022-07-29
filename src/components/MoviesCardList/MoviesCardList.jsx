@@ -1,9 +1,9 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import { Route } from "react-router-dom";
-import MoviesCard from "../MoviesCard/MoviesCard.jsx";
-import Preloader from "../Preloader/PreLoader.jsx";
-import { changeWidth } from "../../utils/config.js";
+import React from 'react';
+import { useEffect, useState } from 'react';
+import { Route } from 'react-router-dom';
+import MoviesCard from '../MoviesCard/MoviesCard.jsx';
+import Preloader from '../Preloader/PreLoader.jsx';
+import { changeWidth } from '../../utils/config.js';
 
 function MoviesCardList({
   movies,
@@ -34,19 +34,19 @@ function MoviesCardList({
 
   useEffect(() => {
     setTimeout(() => {
-      window.addEventListener("resize", changeAfterResize);
+      window.addEventListener('resize', changeAfterResize);
     }, 100);
-    return () => window.removeEventListener("resize", changeAfterResize);
+    return () => window.removeEventListener('resize', changeAfterResize);
   }, []);
 
   return (
-    <section className="cards">
+    <section className='cards'>
       {request ? (
         <Preloader />
       ) : (
         <>
-          <div className="cards__movies">
-            {notFound && movies.length === 0 && "Ничего не найдено"}
+          <div className='cards__movies'>
+            {notFound && movies.length === 0 && 'Ничего не найдено'}
             {movies.slice(0, totalCount).map((movie) => (
               <MoviesCard
                 key={movie.id || movie._id}
@@ -55,10 +55,10 @@ function MoviesCardList({
               />
             ))}
           </div>
-          <Route path="/movies">
-              <div className="cards__mov">
+          <Route path='/movies'>
+              <div className='cards__mov'>
               {movies.length > totalCount && (
-                <button className="cards__button" onClick={handleClickMore}>
+                <button className='cards__button' onClick={handleClickMore}>
                   Еще
                 </button>
                 )}

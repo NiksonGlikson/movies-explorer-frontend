@@ -1,10 +1,10 @@
-import { baseUrl } from "./config.js";
+import { baseUrl } from './config.js';
 
 class MainApi {
   constructor({ address }) {
     this._address = address;
     this._headers = {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     };
   }
 
@@ -20,8 +20,8 @@ class MainApi {
 
   login(form) {
     return fetch(`${this._address}/signin`, {
-      method: "POST",
-      credentials: "include",
+      method: 'POST',
+      credentials: 'include',
       headers: this._headers,
       body: JSON.stringify(form),
     }).then(this._handleResponse);
@@ -29,7 +29,7 @@ class MainApi {
 
   registration(form) {
     return fetch(`${this._address}/signup`, {
-      method: "POST",
+      method: 'POST',
       headers: this._headers,
       body: JSON.stringify(form),
     }).then(this._handleResponse);
@@ -37,15 +37,15 @@ class MainApi {
 
   async getUserInfo() {
     return await fetch(`${this._address}/users/me`, {
-      credentials: "include",
+      credentials: 'include',
       headers: this._headers,
     }).then(this._handleResponse);
   }
 
   patchUserInfo(form) {
     return fetch(`${this._address}/users/me`, {
-      method: "PATCH",
-      credentials: "include",
+      method: 'PATCH',
+      credentials: 'include',
       headers: this._headers,
       body: JSON.stringify(form),
     }).then(this._handleResponse);
@@ -53,22 +53,22 @@ class MainApi {
 
   logout() {
     return fetch(`${this._address}/signout`, {
-      credentials: "include",
+      credentials: 'include',
       headers: this._headers,
     }).then(this._handleResponse);
   }
 
   getSavedMovies() {
     return fetch(`${this._address}/movies`, {
-      credentials: "include",
+      credentials: 'include',
       headers: this._headers,
     }).then(this._handleResponse);
   }
 
   saveMovie(movie) {
     return fetch(`${this._address}/movies`, {
-      method: "POST",
-      credentials: "include",
+      method: 'POST',
+      credentials: 'include',
       headers: this._headers,
       body: JSON.stringify(movie),
     }).then(this._handleResponse);
@@ -76,8 +76,8 @@ class MainApi {
 
   deleteMovie(id) {
     return fetch(`${this._address}/movies/${id}`, {
-      method: "DELETE",
-      credentials: "include",
+      method: 'DELETE',
+      credentials: 'include',
       headers: this._headers,
     }).then(this._handleResponse);
   }

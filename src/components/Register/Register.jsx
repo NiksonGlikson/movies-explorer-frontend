@@ -21,9 +21,9 @@ function Register() {
   const includesInputError = useMemo(
     () =>
       Object.values(validationState.register.errors).some(
-        (errorMessage) => errorMessage,
+        (errorMessage) => errorMessage
       ),
-    [validationState.register.errors],
+    [validationState.register.errors]
   );
 
   function handleChange(e) {
@@ -83,62 +83,62 @@ function Register() {
     disabledInput ||
     Object.values(form).some((input) => input === '');
 
-    return (
-        <section className='register'>
-            <Link className='register__homepage' to='/'>
-                <img
-                    className='header__logo header__logo_register'
-                    src={logoHeader}
-                    alt='логотип'>
-                </img>
-             </Link>
-            <h1 className='register__title'>Добро пожаловать!</h1>
-            <form className='register__form' onSubmit={handleSubmitForm}>
-                <Input
-                    name='name'
-                    id='name'
-                    type='text'
-                    title='Имя'
-                    onChange={handleChange}
-                    error={validationState.register.errors.name}
-                    disabled={disabledInput}
-                    required
-                />
-                <Input
-                    name='email'
-                    id='email'
-                    type='email'
-                    title='e-mail'
-                    onChange={handleChange}
-                    error={validationState.register.errors.email}
-                    disabled={disabledInput}
-                    required
-                />
-                <Input
-                    name='password'
-                    id='password'
-                    type='password'
-                    title='Пароль'
-                    onChange={handleChange}
-                    error={validationState.register.errors.password}
-                    disabled={disabledInput}
-                    required
-                    minLength='8'
-                    maxLength='16'
-                />
-                <button 
-                    type='submit'
-                    className='register__button'
-                    disabled={disableButton}>
-                    Зарегистрироваться
-                </button>
-            </form>
-            <div className='register__redirect'>
-                <p className='register__redirect-text'>Уже зарегистрированы?</p>
-                <Link to='/signin' className='register__redirect-link'>Войти</Link>
+  return (
+    <section className='register'>
+      <Link className='register__homepage' to='/'>
+        <img
+          className='header__logo header__logo_register'
+          src={logoHeader}
+          alt='логотип'
+        ></img>
+      </Link>
+      <h1 className='register__title'>Добро пожаловать!</h1>
+      <form className='register__form' onSubmit={handleSubmitForm}>
+        <Input
+          name='name'
+          type='text'
+          title='Имя'
+          onChange={handleChange}
+          error={validationState.register.errors.name}
+          disabled={disabledInput}
+          required
+        />
+        <Input
+          name='email'
+          type='email'
+          title='E-mail'
+          onChange={handleChange}
+          error={validationState.register.errors.email}
+          disabled={disabledInput}
+          required
+        />
+        <Input
+          name='password'
+          type='password'
+          title='Пароль'
+          onChange={handleChange}
+          error={validationState.register.errors.password}
+          disabled={disabledInput}
+          required
+        />
+        <button
+          type='submit'
+          className={`register__button ${
+            disableButton && 'register__button_disabled'
+          }`}
+          disabled={disableButton}
+        >
+          Зарегистрироваться
+        </button>
+      </form>
+      <div className='register__redirect'>
+        <p className='register__redirect-text'>Уже зарегистрированы?</p>
+        <Link to='/signin' className='register__redirect-link'>
+          Войти
+        </Link>
       </div>
-        </section>
-    )
+    </section>
+  );
 }
 
 export default Register;
