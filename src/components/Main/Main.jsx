@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Header/Header.jsx';
-import Promo from '../Promo/Promo.jsx'
+import Promo from '../Promo/Promo.jsx';
 import NavTab from '../NavTab/NavTab.jsx';
 import AboutProject from '../AboutProject/AboutProject.jsx';
 import Techs from '../Techs/Techs.jsx';
@@ -13,7 +13,7 @@ function Main() {
         <main className='content'>
             <Header/>
             <Promo/>
-            <NavTab/>
+            <NavTab />
             <AboutProject/>
             <Techs/>
             <AboutMe/>

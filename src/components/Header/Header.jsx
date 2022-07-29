@@ -1,16 +1,20 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logoHeader from '../../images/logo.svg';
 import Navigation from '../Navigation/Navigation.jsx';
+import { CurrentUserContext } from '../../context/CurrentUserContext.js';
 
-function Header({ loggedIn }) {
+function Header() {
+    const { userState } = useContext(CurrentUserContext);
+
     return (
-        <header className={`header ${loggedIn ? 'no-background' : ''}`}>
+        <header className='header'>
             <div className='header__container'>
                 <Link to='/'>
                     <img className='header__logo' src={logoHeader} alt='логотип'/>
                 </Link>
-                <Navigation loggedIn={loggedIn} />
+                <Navigation loggedIn={userState.loggedIn} />
             </div>
         </header>
     )

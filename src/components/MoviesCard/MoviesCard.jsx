@@ -1,34 +1,65 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import { useState } from 'react';
-import cardImg from '../../images/BENKSI1.jpg';
+import React from "react";
+import { useContext, useEffect } from "react";
+import { Route } from "react-router-dom";
+import { mainApiUrl } from "../../utils/config.js";
+import { MovieContext } from "../../context/MovieContext.js";
 
-function MoviesCard() {
-    const [likeBtn, setLikeBtnActive] = useState(false);
+function MoviesCard({ movie, handleLikeClick }) {
+  const { movieState } = useContext(MovieContext);
+  const durationHours = Math.floor(movie.duration / 60);
+  const durationMinutes = movie.duration % 60;
+  const likeBtn = movieState.savedMovies.some(
+    (item) => item.movieId === movie.id
+  );
 
-    function handleChangeBtn(e) {
-        setLikeBtnActive(!likeBtn);
-    }
+  const image = movie.image.url
+    ? `${mainApiUrl + movie.image.url}`
+    : movie.image;
 
-    return (
-        <div className="movies-card">
-            <div className="movies-card__info">
-                <div className="movies-card__description">
-                    <h2 className="movies-card__title">В погоне за Бенкси</h2>
-                    <Route path='/movies'>
-                        <button className={`${ likeBtn 
-                        ? 'movies-card__like_active' 
-                        : 'movies-card__like_unlike'}`} onClick={handleChangeBtn}></button>
-                    </Route>
-                    <Route path='/saved-movies'>
-                        <button className='movies-card__delete' onClick={handleChangeBtn}></button>
-                    </Route>
-                </div>
-                <p className="movies-card__duration">1ч42м</p>
-            </div>
-            <img className='movies-card__image' src={cardImg} alt='Фото-фрагмент фильма' />
+  function onLikeClick() {
+    handleLikeClick(movie);
+  }
+
+  useEffect(() => {}, [movieState.savedMovies.length]);
+
+  return (
+    <div className="movies-card">
+      <div className="movies-card__info">
+        <div className="movies-card__description">
+          <h2 className="movies-card__title">{movie.nameRU}</h2>
+          <Route path="/movies">
+            <button
+              className={`${
+                likeBtn
+                  ? "movies-card__like_active"
+                  : "movies-card__like_unlike"
+              }`}
+              onClick={onLikeClick}
+            ></button>
+          </Route>
+          <Route path="/saved-movies">
+            <button
+              className="movies-card__delete"
+              onClick={onLikeClick}
+            ></button>
+          </Route>
         </div>
-    )
+        <p className="movies-card__duration">{`${
+            durationHours + 'ч'
+          } ${durationMinutes} м`}</p>
+      </div>
+      <a 
+        href={movie.trailerLink}
+        target="_blank"
+        rel="noreferrer">
+      <img
+        className="movies-card__image"
+        src={image}
+        alt={movie.nameRU}
+      />
+      </a>
+    </div>
+  );
 }
 
 export default MoviesCard;

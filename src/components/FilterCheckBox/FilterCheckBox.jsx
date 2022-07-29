@@ -1,11 +1,6 @@
 import React from 'react';
-import {useState} from 'react';
 
-function FilterCheckbox() {
-  const [checkbox, setActiveCheckbox] = useState(false);
-  function toggleCheckbox(e) {
-    setActiveCheckbox(!checkbox);
-  }
+function FilterCheckbox({ toggleCheckbox, checkbox }) {
   return (
     <div className='filter'>
       <button
