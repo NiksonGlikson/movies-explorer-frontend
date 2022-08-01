@@ -1,10 +1,10 @@
-import { mainApiUrl } from './config.js';
+import { mainApiUrl } from "./config.js";
 
 class MoviesApi {
   constructor({ address }) {
     this._address = address;
-    this._headers = { 
-        'Content-type': 'application/json' 
+    this._headers = {
+      "Content-type": "application/json",
     };
   }
   _handleResponse = (response) => {

@@ -1,14 +1,13 @@
-import React from 'react';
-import { useContext, useEffect, useState } from 'react';
-import SearchForm from '../SearchForm/SearchForm.jsx';
-import MoviesCardList from '../MoviesCardList/MoviesCardList.jsx';
-import Header from '../Header/Header.jsx';
-import Footer from '../Footer/Footer.jsx';
-import mainApi from '../../utils/MainApi.js';
-import moviesApi from '../../utils/MoviesApi.js';
-import { MovieContext } from '../../context/MovieContext.js';
-import { mainApiUrl } from '../../utils/config.js';
-
+import React from "react";
+import { useContext, useEffect, useState } from "react";
+import SearchForm from "../SearchForm/SearchForm.jsx";
+import MoviesCardList from "../MoviesCardList/MoviesCardList.jsx";
+import Header from "../Header/Header.jsx";
+import Footer from "../Footer/Footer.jsx";
+import mainApi from "../../utils/MainApi.js";
+import moviesApi from "../../utils/MoviesApi.js";
+import { MovieContext } from "../../context/MovieContext.js";
+import { mainApiUrl } from "../../utils/config.js";
 
 function Movies() {
   const { moviesState, setMoviesState } = useContext(MovieContext);
@@ -17,15 +16,15 @@ function Movies() {
   function handleChangeSearchText(e) {
     setMoviesState({
       ...moviesState,
-      moviesSearchText: e.target.value
+      moviesSearchText: e.target.value,
     });
   }
 
-  function handleLikeClick(movie) {
+  function handleClickLike(movie) {
     const savedMovie = moviesState.savedMovies.find(
       (item) => item.movieId === movie.id
     );
-    if(savedMovie) {
+    if (savedMovie) {
       mainApi.deleteMovie(savedMovie._id).then(({ data }) => {
         const savedMovies = moviesState.savedMovies.filter(
           (item) => item.movieId !== data.movieId
@@ -34,15 +33,15 @@ function Movies() {
       });
     } else {
       const saveMovie = {
-        country: movie.country || 'Unknown',
-        director: movie.director || 'Unknown',
+        country: movie.country || "Unknown",
+        director: movie.director || "Unknown",
         duration: movie.duration,
         year: movie.year,
         description: movie.description,
         image: `${mainApiUrl}${movie.image.url}`,
         trailerLink: movie.trailerLink,
-        nameRU: movie.nameRU || 'Unknown',
-        nameEN: movie.nameEN || 'Unknown',
+        nameRU: movie.nameRU || "Unknown",
+        nameEN: movie.nameEN || "Unknown",
         thumbnail: `${mainApiUrl}${movie.image.formats.thumbnail.url}`,
         movieId: movie.id,
       };
@@ -53,18 +52,18 @@ function Movies() {
         });
       });
     }
-    localStorage.setItem('movies', JSON.stringify(moviesState));
+    localStorage.setItem("movies", JSON.stringify(moviesState));
   }
 
   function filterMovies() {
     const searchText = moviesState.moviesSearchText.toLowerCase();
-    if(searchText === '') {
+    if (searchText === "") {
       return;
     }
     const filteredMovies = moviesState.list.filter(
       ({ nameRU, nameEN, duration }) => {
         const nameFilm = `${nameRU}${nameEN}`.toLowerCase();
-        if(moviesState.moviesCheckbox) {
+        if (moviesState.moviesCheckbox) {
           return nameFilm.includes(searchText) && duration <= 40;
         }
         return nameFilm.includes(searchText);
@@ -75,11 +74,11 @@ function Movies() {
       filteredMovies,
       notFoundMovies: filteredMovies.length === 0,
     });
-    localStorage.setItem('movies', JSON.stringify(moviesState));
+    localStorage.setItem("movies", JSON.stringify(moviesState));
   }
 
-  function handleSubmitSearch(e) {
-    e.preventDefault();
+  function handleSubmitSearch(evt) {
+    evt.preventDefault();
     setRequest(true);
     moviesApi
       .getMovies()
@@ -88,7 +87,7 @@ function Movies() {
         filterMovies();
       })
       .catch((err) => {
-        console.log(err)
+        console.log(err);
       })
       .finally(() => {
         setRequest(false);
@@ -107,7 +106,7 @@ function Movies() {
   }, [
     moviesState.moviesCheckbox,
     moviesState.list.length,
-    moviesState.savedMovies.length, 
+    moviesState.savedMovies.length,
   ]);
 
   useEffect(() => {
@@ -124,9 +123,9 @@ function Movies() {
   }, []);
 
   return (
-    <main className='movies'>
+    <main className="movies">
       <Header />
-      <SearchForm 
+      <SearchForm
         onChange={handleChangeSearchText}
         onSubmit={handleSubmitSearch}
         searchText={moviesState.moviesSearchText}
@@ -135,7 +134,7 @@ function Movies() {
       />
       <MoviesCardList
         movies={moviesState.filteredMovies}
-        handleLikeClick={handleLikeClick}
+        handleClickLike={handleClickLike}
         notFound={moviesState.notFoundMovies}
         request={request}
       />

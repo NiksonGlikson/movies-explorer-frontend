@@ -1,23 +1,23 @@
-import React from 'react';
-import { useContext, useEffect, useMemo, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import Header from '../Header/Header.jsx';
-import mainApi from '../../utils/MainApi.js';
-import { checkValidation } from '../../utils/validationConfig.js';
-import { errorMessages } from '../../utils/config.js';
-import { defaultMovieState, MovieContext } from '../../context/MovieContext.js';
+import React from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import Header from "../Header/Header.jsx";
+import mainApi from "../../utils/MainApi.js";
+import { checkValidation } from "../../utils/validationConfig.js";
+import { errorMessages } from "../../utils/config.js";
+import { defaultMovieState, MovieContext } from "../../context/MovieContext.js";
 import {
   CurrentUserContext,
   defaultUserState,
-} from '../../context/CurrentUserContext.js';
-import { Validation } from '../../context/Validation.js';
+} from "../../context/CurrentUserContext.js";
+import { Validation } from "../../context/Validation.js";
 
 function Profile() {
   const { setMoviesState } = useContext(MovieContext);
   const { userState, setUserState } = useContext(CurrentUserContext);
   const { validationState, setValidationState } = useContext(Validation);
   const history = useHistory();
-  const [errorRequest, setErrorRequest] = useState('');
+  const [errorRequest, setErrorRequest] = useState("");
 
   const [form, setForm] = useState({
     name: userState.name,
@@ -45,9 +45,9 @@ function Profile() {
   );
 
   function handleChange(e) {
-    setErrorRequest('');
-    const { newState } = checkValidation(e, 'profile');
-    setErrorRequest('');
+    setErrorRequest("");
+    const { newState } = checkValidation(e, "profile");
+    setErrorRequest("");
     setValidationState(newState(validationState));
     setForm({ ...form, [e.target.name]: e.target.value });
   }
@@ -59,7 +59,7 @@ function Profile() {
     mainApi
       .logout()
       .then((msg) => {
-        history.push('/');
+        history.push("/");
       })
       .catch(console.log);
   }
@@ -85,28 +85,28 @@ function Profile() {
     userState.name !== form.name || userState.email !== form.email;
 
   return (
-    <section className='profile'>
+    <section className="profile">
       <Header />
-      <h1 className='profile__title'>Привет, {userState.name}!</h1>
-      <form className='profile__forms' onSubmit={handleSubmit}>
-        <div className='profile__inputs'>
-          <label className='profile__input-name'>Имя</label>
+      <h1 className="profile__title">Привет, {userState.name}!</h1>
+      <form className="profile__forms" onSubmit={handleSubmit}>
+        <div className="profile__inputs">
+          <label className="profile__input-name">Имя</label>
           <input
-            className='profile__input'
-            type='text'
-            name='name'
+            className="profile__input"
+            type="text"
+            name="name"
             onChange={handleChange}
             value={form.name}
             minLength={2}
             required
           />
         </div>
-        <div className='profile__inputs'>
-          <label className='profile__input-name'>Email</label>
+        <div className="profile__inputs">
+          <label className="profile__input-name">Email</label>
           <input
-            className='profile__input'
-            type='text'
-            name='email'
+            className="profile__input"
+            type="text"
+            name="email"
             onChange={handleChange}
             value={form.email}
             required
@@ -114,29 +114,29 @@ function Profile() {
         </div>
         <p
           className={`register__error-message ${
-            errorRequest && 'register__error-message_active'
+            errorRequest && "register__error-message_active"
           }`}
         >
           {errorRequest}
         </p>
         <p
           className={`register__error-message ${
-            includesErrors && 'register__error-message_active'
+            includesErrors && "register__error-message_active"
           }`}
         >
           {includesErrors}
         </p>
         <button
-          className='profile__submit-edit'
-          type='submit'
+          className="profile__submit-edit"
+          type="submit"
           disabled={includesErrors || !isNewUserInfo}
         >
           Редактировать
         </button>
-        <Link to='/signin'>
+        <Link to="/signin">
           <button
-            className='profile__submit-logout'
-            type='submit'
+            className="profile__submit-logout"
+            type="submit"
             onClick={handleLogout}
           >
             Выйти из аккаунта

@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 
 export const defaultUserState = {
-    _id: '',
-    name: '',
-    email: '',
-    loggedIn: false,
-  };
+  _id: "",
+  name: "",
+  email: "",
+  loggedIn: false,
+};
 
 export const CurrentUserContext = React.createContext(null);
-
