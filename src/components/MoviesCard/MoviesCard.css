@@ -30,7 +30,7 @@
     padding: 0;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
 }
 
 .movies-card__like_active {
