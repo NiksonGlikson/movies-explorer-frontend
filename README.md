@@ -22,3 +22,5 @@
 Сайт - https://movies.explorer.glinkin.nomoredomains.xyz
 
 API - https://movie.explorer.glinkin.nomoredomains.sbs
+
+Ссылка: https://github.com/NiksonGlikson/movies-explorer-frontend/pull/2
