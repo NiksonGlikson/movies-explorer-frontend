@@ -1,6 +1,12 @@
+.movies-card {
+    max-width: 364px;
+    max-height: 271px;
+    height: 100%;
+    width: 100%;
+}
+
 .movies-card__info {
     width: 100%;
-    max-width: 363px;
 }
 
 .movies-card__image {
@@ -14,12 +20,17 @@
 }
 
 .movies-card__title {
+    max-width: 230px;
+    width: 100%;
     font-size: 13px;
     line-height: 15.73px;
     font-weight: 500;
     color: #FFFFFF;
     margin: 0;
-    padding-top: 14px;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .movies-card__like_active {
@@ -75,7 +86,7 @@
     width: 30px;
     height: 30px;
     border: 0;
-    margin: 19px 14px 0 0;
+    margin: 19px 0 0 0;
     background-color: transparent;
 }
 
